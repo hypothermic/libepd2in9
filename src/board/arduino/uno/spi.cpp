@@ -12,6 +12,12 @@
 
 NAMESPACE_BEGIN(LibEpd, Common)
 
+bool SPI::init() {
+    SPIClass::begin();
+    SPIClass::beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE0));
+    return true;
+}
+
 void SPI::write(BYTE value) {
     IO::write(DEFAULT_CS_PIN_TEMP, LOW); // TODO create configurable CS pin
     SPIClass::transfer(value);

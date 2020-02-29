@@ -13,6 +13,7 @@ NAMESPACE_BEGIN(LibEpd, Common)
 
     class SPI {
         public:
+            static bool init();
             static void write(BYTE data);
 
     };

@@ -8,7 +8,9 @@
 
 #include "macro.h"
 
+#ifndef BYTE
 #define BYTE unsigned char
+#endif //BYTE
 
 
 #endif //LIBEPD2IN9_TYPE_H
