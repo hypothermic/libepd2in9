@@ -7,8 +7,7 @@
 
 
 #include "macro.h"
-//#include "type.h"
-#include "board/arduino/uno/type.h"
+#include "type.h"
 
 NAMESPACE_BEGIN(LibEpd, Common)
 

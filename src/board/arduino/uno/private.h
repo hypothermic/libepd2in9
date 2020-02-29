@@ -7,6 +7,7 @@
 
 
 #include <Arduino.h>
+#include <SPI.h>
 
 
 #endif //LIBEPD2IN9_PRIVATE_H
