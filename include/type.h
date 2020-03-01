@@ -12,5 +12,17 @@
 #define BYTE unsigned char
 #endif //BYTE
 
+#ifndef PIN
+#define PIN unsigned char
+#endif
+
+#ifndef DIGITAL_HIGH
+#define DIGITAL_HIGH 1
+#endif
+
+#ifndef DIGITAL_LOW
+#define DIGITAL_LOW 0
+#endif
+
 
 #endif //LIBEPD2IN9_TYPE_H

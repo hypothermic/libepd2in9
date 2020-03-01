@@ -16,4 +16,8 @@ BYTE IO::read(int pin) {
     return digitalRead(pin);
 }
 
+void IO::delay(unsigned long ms) {
+    delayMicroseconds(ms);
+}
+
 NAMESPACE_END(LibEpd, Common)

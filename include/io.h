@@ -16,6 +16,8 @@ NAMESPACE_BEGIN(LibEpd, Common)
             static void write(int pin, BYTE value);
             static BYTE read(int pin);
 
+            static void delay(unsigned long ms);
+
     };
 
 NAMESPACE_END(LibEpd, Common)
