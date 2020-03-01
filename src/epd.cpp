@@ -46,6 +46,11 @@ bool Epd::init() {
     return true;
 }
 
+void Epd::stop() {
+    send_command(DEEP_SLEEP);
+    send_data(0xA5);
+}
+
 void Epd::send_command(BYTE command) {
     IO::write(pin_layout->dc_pin, DIGITAL_LOW);
     SPI::write(command);
@@ -62,9 +67,37 @@ void Epd::await_busy() {
     }
 }
 
-void Epd::stop() {
-    send_command(DEEP_SLEEP);
-    send_data(0xa5);
+void Epd::clear() {
+    send_command(TCON_RESOLUTION);
+    send_data(EPD_WIDTH >> 8);
+    send_data(EPD_WIDTH & 0xff);
+    send_data(EPD_HEIGHT >> 8);
+    send_data(EPD_HEIGHT & 0xff);
+
+    send_command(DATA_START_TRANSMISSION_1);
+
+    IO::delay(2);
+
+    for(int i = 0; i < EPD_WIDTH * EPD_HEIGHT / 8; i++) {
+        send_data(0xFF);
+    }
+
+    IO::delay(2);
+
+    send_command(DATA_START_TRANSMISSION_2);
+
+    IO::delay(2);
+
+    for(int i = 0; i < EPD_WIDTH * EPD_HEIGHT / 8; i++) {
+        send_data(0xFF);
+    }
+
+    IO::delay(2);
+}
+
+void Epd::display() {
+    send_command(DISPLAY_REFRESH);
+    await_busy();
 }
 
 NAMESPACE_END(LibEpd, Common)

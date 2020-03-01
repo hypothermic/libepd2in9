@@ -33,8 +33,11 @@ NAMESPACE_BEGIN(LibEpd, Common)
             }
 
             bool init();
+            void clear();
             void reset();
             void stop();
+
+            void display();
 
         private:
             void send_command(BYTE command);
