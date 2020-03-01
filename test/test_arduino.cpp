@@ -7,38 +7,51 @@
 #include "libepd.h"
 #include "board/arduino/uno/public.h"
 
-void test_led_builtin_pin_number() {
-    TEST_ASSERT_EQUAL(LED_BUILTIN, 13);
-}
+using namespace LibEpd::Common;
 
-void test_led_state_high() {
-    digitalWrite(LED_BUILTIN, HIGH);
-    TEST_ASSERT_EQUAL(digitalRead(LED_BUILTIN), HIGH);
-}
+#define __TEST_PIN_RESET 8
+#define __TEST_PIN_DC    9
+#define __TEST_PIN_CS    10
+#define __TEST_PIN_BUSY  11
 
-void test_led_state_low() {
-    digitalWrite(LED_BUILTIN, LOW);
-    TEST_ASSERT_EQUAL(digitalRead(LED_BUILTIN), LOW);
+const Epd* const epd = new Epd(new PinLayout({__TEST_PIN_RESET,
+                                              __TEST_PIN_DC,
+                                              __TEST_PIN_CS,
+                                              __TEST_PIN_BUSY}));
+
+void test_epd_pin_numbers() {
+    TEST_ASSERT_EQUAL(epd->pin_layout->reset_pin, __TEST_PIN_RESET);
+    TEST_ASSERT_EQUAL(epd->pin_layout->dc_pin,    __TEST_PIN_DC);
+    TEST_ASSERT_EQUAL(epd->pin_layout->cs_pin,    __TEST_PIN_CS);
+    TEST_ASSERT_EQUAL(epd->pin_layout->busy_pin,  __TEST_PIN_BUSY);
 }
 
 void setup() {
     UNITY_BEGIN();
-    RUN_TEST(test_led_builtin_pin_number);
+    RUN_TEST(test_epd_pin_numbers);
 
     pinMode(LED_BUILTIN, OUTPUT);
 }
 
-uint8_t i = 0;
-uint8_t max_blinks = 5;
-
 void loop() {
-    if (i < max_blinks) {
-        RUN_TEST(test_led_state_high);
-        delay(500);
-        RUN_TEST(test_led_state_low);
-        delay(500);
-        i++;
-    } else if (i == max_blinks) {
-        UNITY_END();
-    }
+    UNITY_END();
 }
+
+/*
+ * Unity requirement
+ */
+void setUp() {
+
+}
+
+/*
+ * Unity requirement
+ */
+void tearDown() {
+
+}
+
+#undef __TEST_PIN_RESET
+#undef __TEST_PIN_DC
+#undef __TEST_PIN_CS
+#undef __TEST_PIN_BUSY

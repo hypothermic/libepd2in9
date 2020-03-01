@@ -20,7 +20,7 @@ NAMESPACE_BEGIN(LibEpd, Common)
     } PinLayout_t;
 
     class Epd {
-        private:
+        public: // TODO private
             PinLayout_t* pin_layout;
 
         public:
