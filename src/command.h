@@ -5,9 +5,6 @@
 #ifndef LIBEPD2IN9_COMMAND_H
 #define LIBEPD2IN9_COMMAND_H
 
-#define EPD_WIDTH                      128
-#define EPD_HEIGHT                     296
-
 #define PANEL_SETTING                  0x00
 #define POWER_SETTING                  0x01
 #define POWER_OFF                      0x02

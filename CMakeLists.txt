@@ -81,4 +81,4 @@ add_custom_target(
 )
 
 # Dummy target for ide code completion and highlighting
-add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/epd.cpp include/epd.h include/io.h src/board/arduino/uno/io.cpp src/macro.h include/type.h include/spi.h src/board/arduino/uno/spi.cpp src/board/arduino/uno/type.h test/test_arduino.cpp)
+add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/epd.cpp include/epd.h include/io.h src/board/arduino/uno/io.cpp src/macro.h include/type.h include/spi.h src/board/arduino/uno/spi.cpp src/board/arduino/uno/type.h test/test_arduino.cpp include/color.h include/transaction.h src/basictransaction.cpp src/basictransaction.h)

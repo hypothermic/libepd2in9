@@ -7,6 +7,7 @@
 #include "command.h"
 #include "io.h"
 #include "spi.h"
+#include "transaction.h"
 #include "type.h"
 
 NAMESPACE_BEGIN(LibEpd, Common)
