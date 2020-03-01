@@ -34,7 +34,7 @@ env:
 install:
     - pip install -U platformio
     - platformio update
+    - platformio lib -g install https://github.com/ThrowTheSwitch/Unity.git
 
 script:
-    - pio test
-#    - platformio ci --lib="." --board=uno
+    - platformio ci --lib="." --board=uno
