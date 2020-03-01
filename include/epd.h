@@ -9,6 +9,10 @@
 #include "macro.h"
 #include "type.h"
 
+#ifndef AWAIT_BUSY_TIMEOUT
+#define AWAIT_BUSY_TIMEOUT 25 // ms
+#endif
+
 NAMESPACE_BEGIN(LibEpd, Common)
 
     typedef struct PinLayout {
@@ -28,7 +32,14 @@ NAMESPACE_BEGIN(LibEpd, Common)
                 this->pin_layout = pin_layout;
             }
 
+            bool init();
             void reset();
+            void stop();
+
+        private:
+            void send_command(BYTE command);
+            void send_data(BYTE data);
+            void await_busy();
 
     };
 
