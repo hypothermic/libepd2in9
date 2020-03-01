@@ -1,6 +1,13 @@
-//
-// Created by xforce on 29-02-20.
-//
+/**
+ * @file io.cpp
+ *
+ * @brief Arduino Uno-specific data type overrides
+ *
+ * @ingroup libepd2in9-uno
+ *
+ * @date 29-02-2020
+ * @author hypothermic <admin@hypothermic.nl>
+ */
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "modernize-deprecated-headers" // Arduino still uses legacy libraries.

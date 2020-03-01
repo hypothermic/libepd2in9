@@ -1,6 +1,13 @@
-//
-// Created by xforce on 29-02-20.
-//
+/**
+ * @file io.cpp
+ *
+ * @brief Arduino Uno-specific IO logic
+ *
+ * @ingroup libepd2in9-uno
+ *
+ * @date 29-02-2020
+ * @author hypothermic <admin@hypothermic.nl>
+ */
 
 #include "io.h"
 

@@ -1,6 +1,13 @@
-//
-// Created by xforce on 29-02-20.
-//
+/**
+ * @file type.h
+ *
+ * @brief Overwritable common data types
+ *
+ * @ingroup libepd2in9
+ *
+ * @date 29-02-2020
+ * @author hypothermic <admin@hypothermic.nl>
+ */
 
 #ifndef LIBEPD2IN9_TYPE_H
 #define LIBEPD2IN9_TYPE_H

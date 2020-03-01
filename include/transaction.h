@@ -1,6 +1,13 @@
-//
-// Created by xforce on 01-03-20.
-//
+/**
+ * @file transaction.h
+ *
+ * @brief Class definition for transaction-based display updates
+ *
+ * @ingroup libepd2in9
+ *
+ * @date 01-03-2020
+ * @author hypothermic <admin@hypothermic.nl>
+ */
 
 #ifndef LIBEPD2IN9_TRANSACTION_H
 #define LIBEPD2IN9_TRANSACTION_H

@@ -1,6 +1,13 @@
-//
-// Created by xforce on 01-03-20.
-//
+/**
+ * @file basictransaction.h
+ *
+ * @brief A simple and inefficient transaction implementation.
+ *
+ * @ingroup libepd2in9
+ *
+ * @date 01-03-2020
+ * @author hypothermic <admin@hypothermic.nl>
+ */
 
 #ifndef LIBEPD2IN9_BASICTRANSACTION_H
 #define LIBEPD2IN9_BASICTRANSACTION_H

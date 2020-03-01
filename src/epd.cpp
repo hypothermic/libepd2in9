@@ -1,6 +1,13 @@
-//
-// Created by xforce on 29-02-20.
-//
+/**
+ * @file epd.cpp
+ *
+ * @brief Display representation class implementation.
+ *
+ * @ingroup libepd2in9
+ *
+ * @date 29-02-2020
+ * @author hypothermic <admin@hypothermic.nl>
+ */
 
 #include "epd.h"
 

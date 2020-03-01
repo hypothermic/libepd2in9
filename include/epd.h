@@ -1,6 +1,13 @@
-//
-// Created by xforce on 29-02-20.
-//
+/**
+ * @file epd.h
+ *
+ * @brief Display representation class
+ *
+ * @ingroup libepd2in9
+ *
+ * @date 29-02-2020
+ * @author hypothermic <admin@hypothermic.nl>
+ */
 
 #ifndef LIBEPD2IN9_EPD_H
 #define LIBEPD2IN9_EPD_H
